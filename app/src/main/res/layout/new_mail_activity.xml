@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainViewActivity">
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_action_bar_size"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout">
+
+
+        <ImageButton
+            android:contentDescription="More"
+            android:layout_width="@dimen/activity_action_bar_size"
+            android:layout_height="@dimen/activity_action_bar_size"
+            android:id="@+id/menu_settings"
+            android:layout_alignParentRight="true"
+            android:onClick="MenuSettingsOnClick"
+            android:src="@android:drawable/ic_menu_more"
+            />
+
+        <TextView
+            android:id="@+id/tv_gumed_poczta"
+            android:text="Nowy E-mail"
+            android:textSize="25sp"
+            android:onClick="TitleOnClick"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_name_gumed_poczta" />
+
+        <TextView
+            android:id="@+id/tv_mail_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_email_name"
+            android:layout_alignParentBottom="true"
+            android:text="default@gmail.com" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:id="@+id/linearLayout2">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="Do:"
+                android:textSize="25sp"
+                android:gravity="right"/>
+            <EditText
+                android:id="@+id/et_new_mail_adress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:text="Temat:"
+                android:gravity="right"
+                android:textSize="25sp"
+                android:layout_width="80dp"
+                android:layout_height="match_parent" />
+            <EditText
+                android:id="@+id/et_new_mail_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:hint="Treść mail'a"
+            android:gravity="top"
+            android:ems="10"
+            android:id="@+id/editText3" />
+    </LinearLayout>
+
+    <Button
+        android:text="Wyślij"
+        android:id="@+id/b_new_mail_send"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

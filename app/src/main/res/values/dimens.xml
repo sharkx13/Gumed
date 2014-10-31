@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_action_bar_size">50dp</dimen>
+    <dimen name="activity_name_gumed_poczta">30dp</dimen>
+    <dimen name="activity_email_name">20dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

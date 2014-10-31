@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainViewActivity">
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_action_bar_size"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout">
+
+
+        <ImageButton
+            android:contentDescription="More"
+            android:layout_width="@dimen/activity_action_bar_size"
+            android:layout_height="@dimen/activity_action_bar_size"
+            android:id="@+id/menu_settings"
+            android:layout_alignParentRight="true"
+            android:onClick="MenuSettingsOnClick"
+            android:src="@android:drawable/ic_menu_more"
+            />
+
+        <ImageButton
+            android:contentDescription="Send Email"
+            android:layout_width="@dimen/activity_action_bar_size"
+            android:layout_height="@dimen/activity_action_bar_size"
+            android:id="@+id/menu_new_mail"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/menu_settings"
+            android:layout_toStartOf="@+id/menu_settings"
+            android:onClick="MenuNewMailOnClick"
+            android:src="@android:drawable/ic_menu_upload"/>
+
+        <ImageButton
+            android:contentDescription="Search"
+            android:layout_width="@dimen/activity_action_bar_size"
+            android:layout_height="@dimen/activity_action_bar_size"
+            android:id="@+id/menu_search"
+            android:layout_alignParentTop="true"
+            android:onClick="MenuSearchOnClick"
+            android:layout_toLeftOf="@+id/menu_new_mail"
+            android:layout_toStartOf="@+id/menu_new_mail"
+            android:src="@android:drawable/ic_menu_search"/>
+
+        <TextView
+            android:id="@+id/tv_gumed_poczta"
+            android:text="Nazwa Konta"
+            android:textSize="25sp"
+            android:onClick="TitleOnClick"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_name_gumed_poczta" />
+
+        <TextView
+            android:id="@+id/tv_mail_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_email_name"
+            android:layout_alignParentBottom="true"
+            android:text="default@gmail.com" />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/main_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:fadeScrollbars="true">
+
+        </ListView>
+
+</RelativeLayout>
